@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>에코델타시티 아테라 분양 안내</title>
+  <style>
+    body { font-family: 'Noto Sans KR', sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
+    header { background: #1a73e8; color: #fff; padding: 2rem 1rem; text-align: center; }
+    header h1 { margin: 0; font-size: 2rem; }
+    section { padding: 2rem 1rem; max-width: 960px; margin: auto; background: #fff; margin-top: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    h2 { color: #1a73e8; }
+    .cta { text-align: center; margin-top: 2rem; }
+    .cta button { background: #1a73e8; color: white; border: none; padding: 1rem 2rem; font-size: 1rem; border-radius: 8px; cursor: pointer; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .feature-card { background: #eef2f8; padding: 1rem; border-radius: 8px; }
+    img.responsive { max-width: 100%; height: auto; border-radius: 8px; margin-top: 1rem; }
+    form { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+    input, textarea { padding: 0.75rem; border-radius: 4px; border: 1px solid #ccc; font-size: 1rem; }
+    input[type="submit"] { background: #1a73e8; color: white; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>에코델타시티 아테라 청약 OPEN</h1>
+    <p>부산 강서구의 미래, 스마트시티 중심 아파트</p>
+  </header>
+
+  <section>
+    <h2>단지 정보 요약</h2>
+    <p>총 1,025세대 | 전용 59㎡ / 84㎡ | 분양가 상한제 적용 | 전매 가능 (1년)</p>
+    <img src="https://via.placeholder.com/800x400?text=%EC%95%84%ED%85%8C%EB%9D%BC+%EB%8B%A8%EC%A7%80+%EC%A1%B0%EA%B0%90%EB%8F%84" alt="아테라 조감도" class="responsive">
+    <p>금호건설 신규 브랜드 '아테라'의 첫 적용 단지로, 스마트시티와 수변도시의 중심에서 합리적인 가격으로 내 집 마련의 기회를 잡으세요.</p>
+  </section>
+
+  <section>
+    <h2>왜 아테라인가?</h2>
+    <div class="features">
+      <div class="feature-card">
+        <strong>스마트시티 국가 시범지구</strong>
+        <p>에코델타시티 중심 입지, 미래 가치 확실</p>
+      </div>
+      <div class="feature-card">
+        <strong>비규제 지역 혜택</strong>
+        <p>실거주 의무 없음, 전매제한 단 1년</p>
+      </div>
+      <div class="feature-card">
+        <strong>우수한 커뮤니티 시설</strong>
+        <p>스카이라운지, 키즈룸, 실내체육관 등 프리미엄 구성</p>
+      </div>
+      <div class="feature-card">
+        <strong>합리적인 분양가</strong>
+        <p>평당가 1,600만원대, 주변 시세 대비 매력적인 가격</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>지금 상담 신청하세요!</h2>
+    <p>청약 정보, 견본주택 위치, 유니트 평면도 등 자세히 안내드립니다.</p>
+    <form action="mailto:your@email.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="이름" required>
+      <input type="tel" name="phone" placeholder="연락처 (예: 010-1234-5678)" required>
+      <textarea name="message" rows="4" placeholder="문의 내용을 입력해주세요."></textarea>
+      <input type="submit" value="상담 신청하기">
+    </form>
+  </section>
+</body>
+</html>
