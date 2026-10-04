@@ -3,67 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>에코델타시티 아테라 분양 안내</title>
+  <meta name="description" content="부산 에코델타시티의 새로운 주거 기준, 에코델타시티 아테라 분양 안내">
+  <title>에코델타시티 아테라 | 자연과 기술이 만나는 집</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Noto Sans KR', sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
-    header { background: #1a73e8; color: #fff; padding: 2rem 1rem; text-align: center; }
-    header h1 { margin: 0; font-size: 2rem; }
-    section { padding: 2rem 1rem; max-width: 960px; margin: auto; background: #fff; margin-top: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    h2 { color: #1a73e8; }
-    .cta { text-align: center; margin-top: 2rem; }
-    .cta button { background: #1a73e8; color: white; border: none; padding: 1rem 2rem; font-size: 1rem; border-radius: 8px; cursor: pointer; }
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem; }
-    .feature-card { background: #eef2f8; padding: 1rem; border-radius: 8px; }
-    img.responsive { max-width: 100%; height: auto; border-radius: 8px; margin-top: 1rem; }
-    form { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; }
-    input, textarea { padding: 0.75rem; border-radius: 4px; border: 1px solid #ccc; font-size: 1rem; }
-    input[type="submit"] { background: #1a73e8; color: white; border: none; cursor: pointer; }
+    :root { --ink:#17231f; --cream:#f2f0e9; --forest:#274d40; --sage:#9caa8d; --line:rgba(23,35,31,.16); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--cream); font-family:'Noto Sans KR',sans-serif; word-break:keep-all; }
+    a { color:inherit; text-decoration:none; }
+    button,input { font:inherit; }
+    .serif { font-family:Georgia,'Times New Roman',serif; font-weight:400; }
+    .eyebrow { margin:0 0 18px; color:var(--forest); font:600 11px/1.2 Manrope,sans-serif; letter-spacing:.23em; text-transform:uppercase; }
+    .topbar { position:absolute; z-index:10; top:0; left:0; width:100%; height:92px; display:flex; align-items:center; justify-content:space-between; padding:0 5vw; color:#fff; border-bottom:1px solid rgba(255,255,255,.3); }
+    .brand { display:flex; align-items:center; gap:14px; font-weight:600; letter-spacing:.13em; }
+    .brand-mark { width:32px; height:38px; position:relative; display:inline-block; }
+    .brand-mark:before,.brand-mark:after { content:''; position:absolute; width:20px; height:30px; border:1px solid currentColor; transform:skewY(-28deg); }
+    .brand-mark:before { left:1px; top:1px; }.brand-mark:after { right:1px; bottom:1px; }
+    nav { display:flex; gap:42px; font-size:14px; }
+    nav a { transition:opacity .2s; } nav a:hover { opacity:.6; }
+    .phone { font:500 14px Manrope,sans-serif; letter-spacing:.08em; }
+    .menu { display:none; border:0; background:none; color:inherit; font-size:24px; }
+    .hero { min-height:100vh; position:relative; display:grid; align-items:end; overflow:hidden; color:#fff; background:#24352f; }
+    .hero:before { content:''; position:absolute; inset:0; background:linear-gradient(90deg,rgba(18,34,29,.72),rgba(18,34,29,.08) 68%),linear-gradient(0deg,rgba(18,34,29,.55),transparent 50%),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=88') center/cover; animation:zoom 12s ease-out both; }
+    @keyframes zoom { from { transform:scale(1.07); } to { transform:scale(1); } }
+    .hero-content { position:relative; z-index:1; padding:0 8vw 11vh; max-width:950px; }
+    .hero .eyebrow { color:#dce6d7; }
+    .hero h1 { margin:0; font-size:clamp(55px,8.2vw,122px); line-height:.92; letter-spacing:-.055em; }
+    .hero h1 span { display:block; margin-top:14px; padding-left:11vw; font-style:italic; color:#dfe5d9; }
+    .hero-copy { margin:38px 0 0; padding-left:11vw; font-size:17px; font-weight:300; line-height:1.9; }
+    .scroll { position:absolute; right:5vw; bottom:8vh; z-index:1; display:flex; align-items:center; gap:14px; font:500 10px Manrope,sans-serif; letter-spacing:.2em; writing-mode:vertical-rl; }
+    .scroll:after { content:''; display:block; width:1px; height:74px; background:rgba(255,255,255,.65); }
+    section { padding:140px 8vw; }
+    .intro { display:grid; grid-template-columns:1fr 1.35fr; gap:9vw; align-items:start; }
+    .intro h2,.location h2,.contact h2 { margin:0; font-size:clamp(42px,5.2vw,78px); line-height:1.08; letter-spacing:-.04em; }
+    .intro-text { padding-top:54px; }
+    .intro-text .lead { font-size:clamp(21px,2vw,30px); line-height:1.55; margin:0 0 35px; }
+    .intro-text p:last-child { color:#5d6863; font-weight:300; line-height:2; }
+    .numbers { padding-top:0; display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .number { padding:50px 2vw; border-right:1px solid var(--line); text-align:center; }.number:last-child{border:0}.number b{display:block;font:400 clamp(30px,4vw,58px) Georgia,serif}.number span{display:block;margin-top:10px;color:#6a746f;font-size:13px}
+    .vision { padding:0; display:grid; grid-template-columns:1.12fr .88fr; min-height:820px; background:#1e3b32; color:#fff; }
+    .vision-image { background:url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1500&q=85') center/cover; min-height:600px; }
+    .vision-copy { display:flex; flex-direction:column; justify-content:center; padding:10vw 8vw; }
+    .vision-copy .eyebrow { color:#b5c4ad; }.vision-copy h2{font-size:clamp(42px,5vw,74px);line-height:1.12;margin:0 0 42px}.vision-copy p{color:#d6ddd8;line-height:2;font-weight:300}.text-link{margin-top:40px;display:inline-flex;align-items:center;gap:20px;font:600 11px Manrope,sans-serif;letter-spacing:.18em}.text-link:after{content:'→';font-size:22px;transition:transform .2s}.text-link:hover:after{transform:translateX(8px)}
+    .premium { background:#e5e7df; }
+    .section-head { display:flex; justify-content:space-between; align-items:end; margin-bottom:70px; }.section-head h2{font-size:clamp(48px,6vw,88px);line-height:1;margin:0}.section-head p{max-width:390px;color:#69736e;line-height:1.8}
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .card { min-height:530px; position:relative; overflow:hidden; color:#fff; display:flex; align-items:flex-end; padding:36px; }
+    .card:before { content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,24,19,.75),transparent 65%),var(--bg) center/cover;transition:transform .7s ease}.card:hover:before{transform:scale(1.04)}
+    .card-content{position:relative;z-index:1}.card small{font:500 10px Manrope,sans-serif;letter-spacing:.2em}.card h3{font:400 34px Georgia,serif;margin:12px 0}.card p{font-size:14px;font-weight:300;line-height:1.7;margin:0;opacity:.85}
+    .location { display:grid;grid-template-columns:.9fr 1.1fr;gap:9vw;background:#f6f4ee;align-items:center}.location-image{height:680px;background:url('https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=1400&q=85') center/cover;position:relative}.location-image:after{content:'BUSAN\A ECO DELTA CITY';white-space:pre;position:absolute;left:30px;bottom:30px;color:#fff;font:500 11px/1.8 Manrope,sans-serif;letter-spacing:.18em}.location-list{margin-top:52px;border-top:1px solid var(--line)}.location-item{display:grid;grid-template-columns:65px 1fr;padding:24px 0;border-bottom:1px solid var(--line)}.location-item b{font:400 28px Georgia,serif;color:var(--sage)}.location-item strong{display:block;margin-bottom:6px}.location-item span{font-size:13px;color:#6b746f}
+    .contact { background:#c9d0bd; text-align:center; padding-bottom:110px}.contact h2{max-width:840px;margin:0 auto 28px}.contact>p{color:#556159}.form{max-width:800px;margin:55px auto 0;display:grid;grid-template-columns:1fr 1fr auto;gap:10px}.form input{width:100%;padding:20px;border:1px solid rgba(23,35,31,.28);background:transparent;outline:none}.form input:focus{border-color:var(--forest)}.form button{padding:0 34px;border:0;background:var(--forest);color:#fff;cursor:pointer}.privacy{font-size:11px!important;margin-top:18px}
+    footer{background:#17231f;color:#d4d8d5;padding:58px 8vw;display:flex;justify-content:space-between;align-items:end}.footer-info{font-size:12px;line-height:2;color:#909b96}.footer-logo{font:400 28px Georgia,serif;letter-spacing:.08em;margin-bottom:18px;color:#fff}.copyright{font:10px Manrope,sans-serif;letter-spacing:.1em;color:#7e8984}
+    .reveal { opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:900px){.topbar{height:72px}.topbar nav,.phone{display:none}.menu{display:block}.hero-content{padding:0 7vw 14vh}.hero h1 span,.hero-copy{padding-left:0}.hero-copy{font-size:15px}.scroll{display:none}section{padding:95px 7vw}.intro,.location{grid-template-columns:1fr;gap:45px}.intro-text{padding-top:0}.numbers{grid-template-columns:1fr 1fr}.number:nth-child(2){border-right:0}.number:nth-child(-n+2){border-bottom:1px solid var(--line)}.vision{grid-template-columns:1fr}.vision-copy{padding:90px 8vw;order:-1}.section-head{display:block}.section-head p{margin-top:24px}.cards{grid-template-columns:1fr}.card{min-height:480px}.location-image{height:520px}.form{grid-template-columns:1fr}.form button{padding:19px}.footer{display:block}.copyright{margin-top:25px}}
   </style>
 </head>
 <body>
-  <header>
-    <h1>에코델타시티 아테라 청약 OPEN</h1>
-    <p>부산 강서구의 미래, 스마트시티 중심 아파트</p>
+  <header class="topbar">
+    <a href="#home" class="brand" aria-label="에코델타시티 아테라 홈"><i class="brand-mark"></i><span>ATERA</span></a>
+    <nav aria-label="주요 메뉴"><a href="#story">사업안내</a><a href="#premium">프리미엄</a><a href="#location">입지환경</a><a href="#contact">관심고객등록</a></nav>
+    <a class="phone" href="tel:0510000000">051.000.0000</a>
+    <button class="menu" type="button" aria-label="메뉴 열기">☰</button>
   </header>
 
-  <section>
-    <h2>단지 정보 요약</h2>
-    <p>총 1,025세대 | 전용 59㎡ / 84㎡ | 분양가 상한제 적용 | 전매 가능 (1년)</p>
-    <img src="https://via.placeholder.com/800x400?text=%EC%95%84%ED%85%8C%EB%9D%BC+%EB%8B%A8%EC%A7%80+%EC%A1%B0%EA%B0%90%EB%8F%84" alt="아테라 조감도" class="responsive">
-    <p>금호건설 신규 브랜드 '아테라'의 첫 적용 단지로, 스마트시티와 수변도시의 중심에서 합리적인 가격으로 내 집 마련의 기회를 잡으세요.</p>
-  </section>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content"><p class="eyebrow">Eco Delta City · Busan</p><h1 class="serif">Live beyond,<span>Live Atera.</span></h1><p class="hero-copy">물과 정원, 기술과 사람이 이어지는 곳<br>에코델타시티의 새로운 주거 기준을 만나다</p></div>
+      <span class="scroll">SCROLL TO DISCOVER</span>
+    </section>
 
-  <section>
-    <h2>왜 아테라인가?</h2>
-    <div class="features">
-      <div class="feature-card">
-        <strong>스마트시티 국가 시범지구</strong>
-        <p>에코델타시티 중심 입지, 미래 가치 확실</p>
-      </div>
-      <div class="feature-card">
-        <strong>비규제 지역 혜택</strong>
-        <p>실거주 의무 없음, 전매제한 단 1년</p>
-      </div>
-      <div class="feature-card">
-        <strong>우수한 커뮤니티 시설</strong>
-        <p>스카이라운지, 키즈룸, 실내체육관 등 프리미엄 구성</p>
-      </div>
-      <div class="feature-card">
-        <strong>합리적인 분양가</strong>
-        <p>평당가 1,600만원대, 주변 시세 대비 매력적인 가격</p>
-      </div>
-    </div>
-  </section>
+    <section class="intro reveal" id="story"><div><p class="eyebrow">A New Standard of Living</p><h2 class="serif">Nature meets<br>the future.</h2></div><div class="intro-text"><p class="lead">도시의 편리함과 자연의 여유가<br>가장 아름다운 균형을 이루는 집.</p><p>에코델타시티 아테라는 매일의 풍경과 생활의 방식을 세심하게 설계합니다. 풍부한 수변 녹지와 스마트 라이프 인프라, 그리고 아테라만의 감각적인 공간이 당신의 내일을 새롭게 만듭니다.</p></div></section>
 
-  <section class="cta">
-    <h2>지금 상담 신청하세요!</h2>
-    <p>청약 정보, 견본주택 위치, 유니트 평면도 등 자세히 안내드립니다.</p>
-    <form action="mailto:your@email.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="이름" required>
-      <input type="tel" name="phone" placeholder="연락처 (예: 010-1234-5678)" required>
-      <textarea name="message" rows="4" placeholder="문의 내용을 입력해주세요."></textarea>
-      <input type="submit" value="상담 신청하기">
-    </form>
-  </section>
+    <section class="numbers reveal" aria-label="단지 주요 정보"><div class="number"><b>1,025</b><span>총 세대수</span></div><div class="number"><b>59·84</b><span>전용면적 ㎡</span></div><div class="number"><b>1 year</b><span>전매제한</span></div><div class="number"><b>Smart</b><span>국가시범도시</span></div></section>
+
+    <section class="vision"><div class="vision-image" role="img" aria-label="호수와 산이 어우러진 자연 풍경"></div><div class="vision-copy reveal"><p class="eyebrow">Living with Water</p><h2 class="serif">A city shaped<br>by nature.</h2><p>낙동강의 물길을 따라 펼쳐지는 수변도시.<br>집 가까이에서 산책과 휴식, 다채로운 여가를 누리고<br>자연과 연결된 건강한 일상을 시작합니다.</p><a href="#location" class="text-link">DISCOVER THE LOCATION</a></div></section>
+
+    <section class="premium" id="premium"><div class="section-head reveal"><div><p class="eyebrow">Atera Premium</p><h2 class="serif">Designed for<br>better days.</h2></div><p>눈에 보이는 아름다움을 넘어, 살아갈수록 가치를 더하는 아테라의 세 가지 프리미엄을 경험하세요.</p></div><div class="cards">
+      <article class="card reveal" style="--bg:url('https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85')"><div class="card-content"><small>01 · SPACE</small><h3>Refined Space</h3><p>생활의 동선까지 고려한<br>세련되고 효율적인 공간 설계</p></div></article>
+      <article class="card reveal" style="--bg:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=85')"><div class="card-content"><small>02 · COMMUNITY</small><h3>Elevated Life</h3><p>일상의 품격과 여유를 높이는<br>다채로운 커뮤니티 프로그램</p></div></article>
+      <article class="card reveal" style="--bg:url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1000&q=85')"><div class="card-content"><small>03 · NATURE</small><h3>Green Everyday</h3><p>단지 안팎의 풍부한 녹지와<br>가까이 누리는 쾌적한 자연</p></div></article>
+    </div></section>
+
+    <section class="location" id="location"><div class="location-image reveal" role="img" aria-label="부산 도심 전경"></div><div class="reveal"><p class="eyebrow">Perfect Location</p><h2 class="serif">Everything<br>within reach.</h2><div class="location-list"><div class="location-item"><b>01</b><div><strong>스마트 라이프</strong><span>미래를 앞당기는 에코델타 스마트시티 인프라</span></div></div><div class="location-item"><b>02</b><div><strong>쾌속 교통망</strong><span>부산 도심과 김해, 창원을 잇는 편리한 광역교통</span></div></div><div class="location-item"><b>03</b><div><strong>수변 생활권</strong><span>강과 공원, 문화가 일상이 되는 친환경 주거환경</span></div></div></div></div></section>
+
+    <section class="contact" id="contact"><div class="reveal"><p class="eyebrow">Register Your Interest</p><h2 class="serif">Be the first to discover<br>your new beginning.</h2><p>관심고객으로 등록하시면 분양 소식을 빠르게 안내해 드립니다.</p><form class="form" id="interest-form"><input type="text" name="name" aria-label="이름" placeholder="이름" required><input type="tel" name="phone" aria-label="연락처" placeholder="연락처 (010-0000-0000)" required><button type="submit">관심고객 등록</button></form><p class="privacy">입력하신 정보는 분양 안내 목적으로만 이용됩니다.</p></div></section>
+  </main>
+
+  <footer><div><div class="footer-logo">ATERA</div><div class="footer-info">시행 · 시공 금호건설 &nbsp; | &nbsp; 에코델타시티 아테라<br>※ 본 페이지의 이미지는 소비자의 이해를 돕기 위한 이미지 컷입니다.</div></div><div class="copyright">© 2026 KUMHO E&C. ALL RIGHTS RESERVED.</div></footer>
+  <script>
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }), { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.querySelector('.menu').addEventListener('click', () => document.querySelector('#contact').scrollIntoView());
+    document.querySelector('#interest-form').addEventListener('submit', event => { event.preventDefault(); const button = event.currentTarget.querySelector('button'); button.textContent = '등록되었습니다'; button.disabled = true; });
+  </script>
 </body>
 </html>
